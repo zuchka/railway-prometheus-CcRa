@@ -36,4 +36,4 @@ scrape_configs:
   - job_name: 'redis'
     scrape_interval: 5s
     static_configs:
-      - targets: ['redis-metricscollector-production.up.railway.app/']
+      - targets: ['redis-metricscollector-production.up.railway.app']
