@@ -1,5 +1,5 @@
 global:
-  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  scrape_interval:     150s # By default, scrape targets every 15 seconds.
 
   # Attach these labels to any time series or alerts when communicating with
   # external systems (federation, remote storage, Alertmanager).
@@ -13,27 +13,27 @@ scrape_configs:
   - job_name: 'prometheus'
 
     # Override the global default and scrape targets from this job every 5 seconds.
-    scrape_interval: 5s
+    scrape_interval: 150s
 
     static_configs:
       - targets: ['localhost:9090']
   
   - job_name: 'demo_application'
-    scrape_interval: 5s
+    scrape_interval: 150s
     static_configs:
       - targets: ['demo.do.prometheus.io:9090']
 
   - job_name: 'postgres'
-    scrape_interval: 5s
+    scrape_interval: 150s
     static_configs:
       - targets: ['postgres-metrics-collector-production.up.railway.app']
 
   - job_name: 'mysql'
-    scrape_interval: 5s
+    scrape_interval: 150s
     static_configs:
       - targets: ['mysql-metrics-collector-tz-4-production.up.railway.app']
 
   - job_name: 'redis'
-    scrape_interval: 5s
+    scrape_interval: 150s
     static_configs:
       - targets: ['redis-metricscollector-production.up.railway.app']
